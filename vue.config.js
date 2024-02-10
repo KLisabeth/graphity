@@ -1,8 +1,9 @@
-import { defineConfig } from '@vue/cli-service'
-export default defineConfig({
+const { defineConfig } = require('@vue/cli-service');
+
+module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
     ? '/graphity/'
     : '/',
   outputDir: 'docs',
-  transpileDependencies: true
-})
+  transpileDependencies: [] // Set to true if you want to transpile all dependencies
+});
